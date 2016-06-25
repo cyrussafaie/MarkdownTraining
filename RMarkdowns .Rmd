@@ -1,0 +1,108 @@
+---
+title: "RMarkdown"
+author: "Cyrus Safaie"
+date: "June 25, 2016"
+output: html_document
+---
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+
+Markdown is technically a scripting language (really??)
+
+*italics* and _italics_
+
+**bold** and __bold__
+
+superscript^2^
+
+~~strikethrough~~
+
+[my Linkedin](https://www.linkedin.com/in/hsafaie)
+
+# Header 1
+
+## Header 2
+
+### Header 3
+
+#### Header 4
+
+##### Header 5
+
+###### Header 6
+
+endash: --
+
+emdash: ---
+
+ellipsis: ...
+
+inline equation: $A = \pi*r^{2}$
+
+image: ![](UC.png)
+
+horizontal rule (or slide break):
+
+***
+
+> block quote
+
+* unordered list
+
+
+* item 2
+    + sub-item 1
+    + sub-item 2
+
+1. ordered list
+
+2. item 2
+    + sub-item 1
+    + sub-item 2
+
+Table Header  | Second Header
+------------- | -------------
+Table Cell    | Cell 2
+Cell 3        | Cell 4
+
+
+Place code inline with a single back ticks. The
+first back tick must be followed by an R, like
+a=2,abd b=3 then a+b is equal to `r a=2;b=3;a+b`.
+
+Add chunk options within braces. For example,
+`echo=FALSE` will prevent source code from being
+displayed, if `eval=FALSE`, knitr will not run the code in the code chunk:
+
+```{r eval=TRUE, echo=FALSE}
+paste("Hello", "World!")
+```
+
+If `collapse=TRUE`, knitr will collapse all the source and output blocks created by the chunk into a single block.
+
+```{r collapse=TRUE}
+paste("Hello", "World!")
+```
+
+There are many other R code chunck options which may also be extermely helpful such as warnings. Google R Markdown Chunk option for more details 
+
+Couple of more examples from the RMarkdown default file in R studio:
+
+```{r cars}
+str(cars)
+```
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Through markdown there is a functionality to create presentation embedding R code and LaTeX.
+
+Here is one example I created for a project
+
+[Variable Selection in GLM](https://rpubs.com/hsafaie/glmnet)
